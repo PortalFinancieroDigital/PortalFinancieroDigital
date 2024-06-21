@@ -1,0 +1,399 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Nunito";
+  src: url(Nunito-Bold-2ade25044b28513535b13154afa330e0664cf91787763f79e30276581c257592.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url(Nunito-Light-7f3957799ae167e6f3ec967cf38421469091668adeec0761e2df1bbfbd4b3c9f.ttf);
+  font-weight: 300;
+}
+
+html {
+  @apply text-gray-bancard-700 min-h-full
+}
+
+body {
+  font-family: 'Nunito';
+}
+
+.hr-dark-gray {
+  border: 0;
+  border-top: 2px solid rgb(145, 140, 140);
+  margin: 1em 0;
+  padding: 0;
+}
+
+.hr-black {
+  border: 0;
+  border-top: 0.5px solid black;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.hr-gray {
+  border: 0;
+  border-top: 2px solid gainsboro;
+  margin: 0;
+  padding: 0;
+}
+
+.card-band{
+  border: 0;
+  border-top: 30px solid gainsboro;
+  margin: 0;
+  padding: 0;
+}
+
+.active-bg {
+  background-color: #66CC88;
+}
+
+.expired-bg {
+  background-color: #D65C5C;
+}
+
+.unavailable-bg {
+  background-color: #F7A70A;
+}
+
+input:disabled, button:disabled {
+  background-color: rgb(87 116 171/var(--tw-bg-opacity)) !important;
+
+  @apply bg-blue-bancard-400 border-blue-bancard-400 bg-opacity-40 border-opacity-5
+}
+
+.bancard-input-gray {
+  @apply w-full rounded bg-blue-bancard-50 border-transparent
+}
+
+.bancard-input-label {
+  @apply font-bold mb-1 text-sm text-gray-bancard-700
+}
+
+.error-text {
+  @apply hidden text-red-bancard-500 text-xs leading-none mt-2
+}
+
+.error-input {
+  @apply border-red-bancard-500 bg-gray-bancard-50
+}
+
+.input-email-error {
+  @apply error-text;
+}
+
+.email-error .input-email-error {
+  @apply block;
+}
+
+.input-card-pan-error {
+  @apply error-text;
+}
+
+.card-pan-error .input-card-pan-error {
+  @apply block;
+}
+
+.input-not-valid-error {
+  @apply error-text;
+}
+
+.not-valid-error .input-not-valid-error {
+  @apply block;
+}
+
+.input-length-error {
+  @apply error-text;
+}
+
+.length-error .input-length-error {
+  @apply block;
+}
+
+.input-required-error {
+  @apply error-text;
+}
+
+.required-error .input-required-error {
+  @apply block;
+}
+
+.password-not-equal-error {
+  @apply error-text;
+}
+
+.not-equal-error .password-not-equal-error {
+  @apply block;
+}
+
+.input-password-length-error {
+  @apply error-text;
+}
+
+.password-length-error .input-password-length-error {
+  @apply block;
+}
+
+.input-password-alphabetic-error {
+  @apply error-text;
+}
+
+.password-alphabetic-error .input-password-alphabetic-error {
+  @apply block;
+}
+
+.input-password-digit-error {
+  @apply error-text;
+}
+
+.password-digit-error .input-password-digit-error {
+  @apply block;
+}
+
+.input-password-strength-error {
+  @apply error-text;
+}
+
+.password-strength-error .input-password-strength-error {
+  @apply block;
+}
+
+.input-passsword-length-error {
+  @apply error-text;
+}
+
+.passsword-length-error .input-passsword-length-error {
+  @apply block;
+}
+
+.input-name-error {
+  @apply error-text;
+}
+
+.name-error .input-name-error {
+  @apply block;
+}
+
+.input-surname-error {
+  @apply error-text;
+}
+
+.surname-error .input-surname-error {
+  @apply block;
+}
+
+.flip {
+  perspective: 600px;
+}
+
+.flip-content {
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+
+.flip-content-focus{
+  transform: rotateY(180deg);
+  transition: transform 0.3s;
+}
+
+.flip-front,
+.flip-back {
+  @apply w-full h-full absolute;
+  backface-visibility: hidden;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+.back-svg {
+  background-image: url(card-back-background-9a0ea6c5d6085b3f3e38c842783c48849791029107d3824a202330f5ee10a005.svg);
+  background-size: 100% 100%; 
+}
+
+.flip-front.front-svg {
+  background-image: url(card-front-background-3a0a31d8842a3eadf9874cca672f7e2df0b90a0fed0427b18d8e38a2d5cdf3be.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-back.back-svg {
+  background-image: url(card-back-background-9a0ea6c5d6085b3f3e38c842783c48849791029107d3824a202330f5ee10a005.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.input-ci-invalid-error {
+  @apply error-text;
+}
+
+.ci-invalid-error .input-ci-invalid-error {
+  @apply block;
+}
+
+.input-max-length-error {
+  @apply error-text;
+}
+
+.max-length-error .input-max-length-error {
+  @apply block;
+}
+
+.input-min-length-error {
+  @apply error-text;
+}
+
+.min-length-error .input-min-length-error {
+  @apply block;
+}
+
+.pagy-nav,
+.pagy-nav-js {
+  @apply flex space-x-2;
+}
+
+.pagy-nav .page a,
+.pagy-nav .page.active,
+.pagy-nav .page.prev.disabled,
+.pagy-nav .page.next.disabled,
+.pagy-nav-js .page a,
+.pagy-nav-js .page.active,
+.pagy-nav-js .page.prev.disabled,
+.pagy-nav-js .page.next.disabled {
+  @apply block rounded-lg px-3 py-1 text-sm text-gray-500 font-semibold bg-gray-200 shadow-md;
+  &:hover{
+    @apply bg-gray-300;
+  }
+  &:active{
+    @apply bg-gray-400 text-white;
+  }
+}
+
+.pagy-nav .page.prev.disabled,
+.pagy-nav .page.next.disabled,
+.pagy-nav-js .page.prev.disabled,
+.pagy-nav-js .page.next.disabled {
+  @apply text-gray-400 cursor-default;
+  &:hover {
+    @apply text-gray-400 bg-gray-200;
+  }
+  &:active {
+    @apply text-gray-400 bg-gray-200;
+  }
+}
+
+.pagy-nav .page.active,
+.pagy-nav-js .page.active {
+  @apply text-white cursor-default bg-gray-400;
+  &:hover {
+    @apply text-white bg-gray-400;
+  }
+  &:active {
+    @apply bg-gray-400 text-white;
+  }
+}
+
+
+.pagy-combo-nav-js {
+  @apply flex max-w-max rounded-full px-3 py-1 text-sm text-gray-500 font-semibold bg-gray-200 shadow-md;
+}
+
+.pagy-combo-nav-js .pagy-combo-input {
+  @apply bg-white px-2 rounded-sm
+}
+
+.pagy-combo-nav-js .page.prev,
+.pagy-combo-nav-js .page.next {
+  &:hover {
+    @apply text-gray-800;
+  }
+  &:active {
+    @apply text-gray-800;
+  }
+}
+
+.pagy-combo-nav-js .page.prev.disabled,
+.pagy-combo-nav-js .page.next.disabled {
+  @apply text-gray-400 cursor-default;
+}
+
+.flatpickr-calendar {
+  box-shadow: 0px 0px 0px 0px !important;
+  margin: 2rem auto !important;
+}
+
+.flatpickr-weekdays {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important;
+}
+
+.close-list {
+  transform: rotate(270deg);
+}
+
+.selected-filter-desktop{
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.264);
+  color: rgba(0, 0, 255, 0.553);
+}
+
+.blink{
+  -moz-animation: blinker linear 1.5s infinite;
+  -webkit-animation: blinker linear 1.5s infinite;
+  -o-animation: blinker linear 1.5s infinite;
+  animation: blinker linear 1.5s infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes dots {
+  0%, 20% {
+    color: transparent;
+    text-shadow: .25em 0 0 transparent, .5em 0 0 transparent;
+  }
+  40% {
+    color: currentColor;
+    text-shadow: .25em 0 0 transparent, .5em 0 0 transparent;
+  }
+  60% {
+    text-shadow: .25em 0 0 currentColor, .5em 0 0 transparent;
+  }
+  80%, 100% {
+    text-shadow: .25em 0 0 currentColor, .5em 0 0 currentColor;
+  }
+}
+
+.loading-dots::after {
+  -moz-animation: dots 1.5s ease-out infinite;
+  -webkit-animation: dots 1.5s ease-out infinite;
+  -o-animation: dots 1.5s ease-out infinite;
+  animation: dots 1.5s ease-out infinite;
+  content: '.';
+  margin-left: 1px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
